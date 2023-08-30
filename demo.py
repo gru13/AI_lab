@@ -50,6 +50,7 @@ class Agent:
         self.env = env
         self.x = 0  # agent location
         self.y = 0
+        self.n = self.env.n
         self.percept_Sequenc = []
         self.env.AgentlocChange(self.x, self.y)
         self.env.display()
@@ -96,7 +97,7 @@ class Agent:
             if (self.env.isAvailable(x, y+1) and self.env.isDirt(x, y+1)):
                 self.down()
                 continue
-            self.env.AgentlocChange(x+randint(-1, 1), y+randint(-1, 1))
+            self.env.AgentlocChange(x+randint(0, 1), y+randint(0, 1))
 
         self.env.display()
 
