@@ -102,7 +102,7 @@ class Agent:
         self.env.display()
 
 
-En = Env(5)
+En = Env(6)
 Agnt = Agent(En)
 # print(En.dirtPresent())
 Agnt.clean()
